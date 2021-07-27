@@ -1,4 +1,4 @@
-package com.example.crud2.Swagger;
+package com.example.crud6.Swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,15 +8,14 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import static springfox.documentation.builders.PathSelectors.regex;
-
 @Configuration
 @EnableSwagger2
-public class SwaggerConfiguration {
+public class Swaggerconfiguration {
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.crud2.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.crud6.Crudcontroller"))
                 .paths(regex("/.*"))
                 .build();
 
